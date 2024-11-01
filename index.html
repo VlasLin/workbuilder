@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Про мене</title>
+    <title>Головна сторінка</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,47 +35,70 @@
             padding: 20px;
             background-color: white;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
             text-align: center;
-            color: #333;
         }
-        .photo {
-            display: block;
-            margin: 20px auto;
-            border-radius: 50%;
-            width: 200px;
-        }
-        p {
-            line-height: 1.6;
+        .instagram-links a {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
             color: #333;
+            font-weight: bold;
+        }
+        .weather, .map {
+            margin: 20px 0;
+        }
+        .map iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Про мене</h1>
+        <h1>Головна сторінка</h1>
     </header>
 
-    <nav id="menu">
+    <nav>
         <a href="index.html">Головна</a>
         <a href="hoby.html">Мої захоплення</a>
         <a href="zvo.html">Мій ЗВО</a>
         <a href="contact.html">Контакти</a>
-        <a href="carer.html">Контакти</a>
+        <a href="carer.html">Кар'єра</a>
     </nav>
 
     <div class="content">
-        <img src="твоя-фотографія.jpg" alt="Фото автора" class="photo">
-        <h2>Вітаю на моєму сайті!</h2>
-        <p>Мене звати Влад Охріменко. Я власник та керівник компанії <strong>hupokras.garage</strong>, яка спеціалізується на послугах з ремонту автомобілів. Я сертифікований маляр з досвідом роботи на офіційному сервісному центрі Toyota, і постійно вдосконалюю свої навички у сфері автопокраски та ремонту.</p>
+        <h2>Вітаємо на нашому сайті!</h2>
+        <p>Це портал для навігації між нашими сторінками. Виберіть потрібний розділ для перегляду інформації.</p>
 
-        <p>Зараз я працюю електриком з 8:00 до 17:00, а після цього займаюся ремонтом автомобілів, надаючи якісні послуги моїм клієнтам. Крім цього, я веду блог на Instagram, де ділюся цікавими моментами зі свого професійного життя та різними етапами ремонту авто.</p>
+        <div class="weather">
+            <h3>Погода в Черкасах</h3>
+            <!-- Віджет погоди -->
+            <a class="weatherwidget-io" href="https://forecast7.com/uk/49d4440d12/cherkasy/" data-label_1="ЧЕРКАСИ" data-label_2="ПОГОДА" data-theme="original">ЧЕРКАСИ ПОГОДА</a>
+            <script>
+                !function(d,s,id){
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if(!d.getElementById(id)){
+                        js = d.createElement(s); js.id = id;
+                        js.src = 'https://weatherwidget.io/js/widget.min.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, 'script', 'weatherwidget-io-js');
+            </script>
+        </div>
 
-        <p>Я завжди намагаюся забезпечити високий рівень обслуговування та дотримуюся професійних стандартів у своїй роботі. У моєму гаражі ми займаємося фарбуванням, поліруванням, зварюванням, відновленням авто після аварій та ремонтом подряпин без фарбування.</p>
+        <div class="map">
+            <h3>Наше місце знаходження</h3>
+            <!-- Google Maps для ЧНУ, Черкаси -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.2732171361743!2d32.06801941568722!3d49.42982977934921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14b6f8fe33e65%3A0x63079d2f2fc39f9d!2z0JjQvdGB0LrQsNC80L7QstCw0L3QuNC60LAg0JfQsNCx0LDRgNC-0LLQsCwgQ2hlcmthc3kgTmF0aW9uYWwgVW5pdmVyc2l0eQ!5e0!3m2!1sen!2sua!4v1698850213548!5m2!1sen!2sua" allowfullscreen></iframe>
+        </div>
 
-        <p>Сподіваюся, мій сайт допоможе вам більше дізнатися про мою роботу та захоплення. Якщо у вас виникли питання, не соромтеся звертатися до мене через розділ <a href="contacts.html">Контакти</a>.</p>
+        <div class="instagram-links">
+            <h3>Наші Instagram сторінки</h3>
+            <a href="https://www.instagram.com/hupokras.garage" target="_blank">hupokras.garage</a>
+            <a href="https://www.instagram.com/hupokrites" target="_blank">hupokrites</a>
+        </div>
     </div>
 
 </body>
