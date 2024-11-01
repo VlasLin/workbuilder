@@ -3,13 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мої захоплення</title>
+    <title>Про мене - Hupokras Garage</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            width: 200px;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+
+        .modal:target {
+            display: flex;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Мої захоплення</h1>
+        <h1>Про мене - Hupokras Garage</h1>
     </header>
 
     <nav>
@@ -22,7 +77,41 @@
     </nav>
 
     <div class="content">
-        <p>Моє головне захоплення – це автомобілі. Я займаюся ремонтом та покрасочними роботами. Також веду блог, де ділюся своїми навичками та порадами з автопокраски.</p>
+        <h2>Охріменко Владислав</h2>
+        <p>Мене звати Владислав, я сертифікований маляр та засновник <strong>Hupokras Garage</strong> у Гудзівці. Мій досвід включає роботу в компанії Toyota, де я здобув цінний досвід у покрасці та відновленні автомобілів. Зараз я веду Instagram-блог, де ділюся секретами автопокраски, полірування, зварювання та відновлення автомобілів після ДТП. Моя майстерня пропонує високоякісне видалення подряпин без фарбування та інші послуги, спрямовані на відновлення автівок.</p>
+        <p>На цій сторінці ви можете ознайомитися з деякими роботами, які я вже виконав для моїх клієнтів. Кожна фотографія – це відображення моєї уваги до деталей і бажання досягти найвищої якості в кожній роботі.</p>
+
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <a href="#modal1">
+                    <img src="path/to/photo1.jpg" alt="Оновлений автомобіль після фарбування">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="#modal2">
+                    <img src="path/to/photo2.jpg" alt="Полірування кузова автомобіля">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="#modal3">
+                    <img src="path/to/photo3.jpg" alt="Видалення подряпин без фарбування">
+                </a>
+            </div>
+        </div>
+
+        <!-- Модальні вікна для галереї -->
+        <div id="modal1" class="modal">
+            <a href="#" class="close-modal">&times;</a>
+            <img src="path/to/photo1.jpg" alt="Оновлений автомобіль після фарбування">
+        </div>
+        <div id="modal2" class="modal">
+            <a href="#" class="close-modal">&times;</a>
+            <img src="path/to/photo2.jpg" alt="Полірування кузова автомобіля">
+        </div>
+        <div id="modal3" class="modal">
+            <a href="#" class="close-modal">&times;</a>
+            <img src="path/to/photo3.jpg" alt="Видалення подряпин без фарбування">
+        </div>
     </div>
 
     <footer>
