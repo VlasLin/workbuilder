@@ -5,18 +5,18 @@
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #ff00e1;
     padding: 10px 0;
     text-align: center;
 }
 
     header h1 {
-        color: white;
+        color: rgb(0, 0, 0);
     }
 
 nav a {
     margin: 0 15px;
-    color: white;
+    color: rgb(58, 9, 9);
     text-decoration: none;
 }
 
