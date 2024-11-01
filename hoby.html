@@ -6,15 +6,30 @@
     <title>Про мене - Hupokras Garage</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            padding: 20px;
+            flex: 1;
+        }
+
         .gallery-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
+            margin-top: 20px;
         }
 
         .gallery-item {
-            width: 200px;
+            width: 180px;
             position: relative;
         }
 
@@ -39,6 +54,7 @@
             background-color: rgba(0, 0, 0, 0.8);
             justify-content: center;
             align-items: center;
+            z-index: 1000;
         }
 
         .modal img {
@@ -58,6 +74,13 @@
             color: white;
             font-size: 24px;
             text-decoration: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
         }
     </style>
 </head>
@@ -80,11 +103,13 @@
         <h2>Охріменко Владислав</h2>
         <p>Мене звати Владислав, я сертифікований маляр та засновник <strong>Hupokras Garage</strong>. Мій досвід включає роботу в компанії Toyota, де я здобув цінний досвід у покрасці та відновленні автомобілів. Зараз я веду Instagram-блог, де ділюся секретами автопокраски, полірування, зварювання та відновлення автомобілів після ДТП. Моя майстерня пропонує високоякісне видалення подряпин без фарбування та інші послуги, спрямовані на відновлення автівок.</p>
         <p>На цій сторінці ви можете ознайомитися з деякими роботами, які я вже виконав для моїх клієнтів. Кожна фотографія – це відображення моєї уваги до деталей і бажання досягти найвищої якості в кожній роботі.</p>
+        
         <div class="instagram-links">
             <h3>Мої Instagram сторінки</h3>
             <a href="https://www.instagram.com/hupokras.garage" target="_blank">hupokras.garage</a>
             <a href="https://www.instagram.com/hupokrites" target="_blank">hupokrites</a>
         </div>
+
         <div class="gallery-container">
             <div class="gallery-item">
                 <a href="#modal1">
@@ -114,7 +139,7 @@
         </div>
         <div id="modal3" class="modal">
             <a href="#" class="close-modal">&times;</a>
-            <img src="photo3job.jpg" alt="Видалення подряпин без фарбування">
+            <img src="photojob3.jpg" alt="Видалення подряпин без фарбування">
         </div>
     </div>
 
