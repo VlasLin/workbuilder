@@ -1,0 +1,11 @@
+// _buttons.scss
+.button {
+    color: $primary-color;
+    &--primary {
+      background-color: $primary-color;
+    }
+    &--secondary {
+      background-color: $secondary-color;
+    }
+  }
+  

@@ -1,0 +1,6 @@
+// _header.scss
+.header {
+    @include flex-center;
+    background-color: $primary-color;
+  }
+  
