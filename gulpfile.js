@@ -78,3 +78,15 @@ gulp.task('clean', () => {
 // Головні завдання для запуску збірки та архівації
 gulp.task('build:debug', gulp.series('clean', 'css:debug', 'optimize:images', 'archive:debug'));
 gulp.task('build:production', gulp.series('clean', 'css:production', 'optimize:images', 'archive:production'));
+const { exec } = require('child_process');
+
+// Завдання для запуску Webpack перед архівацією
+gulp.task('webpack:build', (cb) => {
+  exec('npx webpack --env production=true', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
+gulp.task('archive:production', gulp.series('webpack:build', 'archive:production'));
